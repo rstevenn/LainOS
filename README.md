@@ -1,6 +1,6 @@
 # Presentation
 LainOS is a custom os inspired by the anime Serial experiments Lain.
-This is a pet so it will have a lot of instability and security issues.
+This is a petProject so it will have a lot of instability and security issues.
 
 # Download
 run this command in a terminal
