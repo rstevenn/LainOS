@@ -13,13 +13,12 @@ run this command in a terminal
 
 ## Windows
 
-### requierments (this is the environement i use to devellop)
- - bochs 2.7 emulator from https://bochs.sourceforge.io/
- - nasm 2.13.01 from https://nasm.us/
- - windows 10
+### requirements (this is the environment I use to develop)
+ - Bochs 2.7 emulator from https://bochs.sourceforge.io/
+ - Nasm 2.13.01 from https://nasm.us/
+ - Windows 10
 
 ### build and run
- - open a terminal in the director containing LainOS
- - execute the 'build_boot_loader.bat' script by double clicking on it
- - double click 'bochsrc.bxrc' to run the vm
- 
+ - Open a terminal in the directory containing LainOS
+ - Execute the 'build_boot_loader.bat' script by double clicking on it
+ - Double click 'bochsrc.bxrc' to run the OS on a virtual machine
