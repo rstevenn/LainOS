@@ -19,6 +19,6 @@ run this command in a terminal
  - Windows 10
 
 ### build and run
- - Open a terminal in the directory containing LainOS
+ - Go in the directory containing LainOS
  - Execute the 'build_boot_loader.bat' script by double clicking on it
  - Double click 'bochsrc.bxrc' to run the OS on a virtual machine
