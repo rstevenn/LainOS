@@ -23,18 +23,39 @@ jmp $
 %include "asm/osprint.asm"
 %include "asm/gdt.asm"
 %include "asm/switchToPm.asm"
+%include "asm/cpuID.asm"
 
 
 [bits 32]
 BEGIN_PM:
 mov ebx, JUMP_TO_32BIT_MOD_MESSAGE
 call print_string_os ; debug
+
+; check CPUID
+call CHECK_CPUID
+
+mov ebx, CPUID_EXIST_MESSAGE
+call print_string_os ; debug
+
+; check long mode
+call CHECK_LONG_MOD
+
+mov ebx, LONG_MODE_EXIST_MESSAGE
+call print_string_os ; debug
+
 jmp $
 
 OUT_OF_SCOPE_MESSAGE:
     db '[+] Out of bootloader', 10, 13, 'Jump to 32bits protected mod...', 0
 
 JUMP_TO_32BIT_MOD_MESSAGE:
-    db '[+] 32bits loaded. Stand by...', 0
+    db '[+] 32bits loaded. Check CPUID...', 0
+
+CPUID_EXIST_MESSAGE:
+	db '[+] CPUID exist. Check LONGMODE...',0
+
+LONG_MODE_EXIST_MESSAGE:
+	db '[+] LONGMODE exist, Stand by...',0
+
 
 times 2048 -( $ - $$ ) db 0

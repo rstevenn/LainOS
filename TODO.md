@@ -6,9 +6,9 @@
  - switch to 32 bits mode
 
 ## IN PROGRESS
+ - switch to 64 bits mode
 
 ## TODO
- - switch to 64 bits mode
  - base of kernel 
  - memory management (ram)
  - event gestion (crashes, input output etc...)
