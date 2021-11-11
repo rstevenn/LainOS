@@ -24,6 +24,7 @@ jmp $
 %include "asm/gdt.asm"
 %include "asm/switchToPm.asm"
 %include "asm/cpuID.asm"
+%include "asm/64bitsPadging.asm"
 
 
 [bits 32]
@@ -55,7 +56,7 @@ CPUID_EXIST_MESSAGE:
 	db '[+] CPUID exist. Check LONGMODE...',0
 
 LONG_MODE_EXIST_MESSAGE:
-	db '[+] LONGMODE exist, Stand by...',0
+	db '[+] LONGMODE exist. Setup Paging...',0
 
 
 times 2048 -( $ - $$ ) db 0
